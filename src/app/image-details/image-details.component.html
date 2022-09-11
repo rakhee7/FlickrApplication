@@ -1,0 +1,28 @@
+<html>
+<body>
+    <div class="container">
+        <div class="col-xs-12">
+            <a [routerLink]="['/search']">
+                <img class="back-arrow-image" src="assets/back.png" alt="">Back To Explore</a>
+        </div>
+        <div class="col-xs-12">
+            <h2 class="animate-charcter hover-shadow">{{ ImageDetails?.title._content }}</h2>
+        </div>
+        <div class="row col-md-12">
+            <div class="col-lg-6">
+                <ul class="list">
+                    <li>Image Id : {{ ImageDetails?.id }}</li>
+                    <li>Image Credit : {{ ImageDetails?.owner }}</li>
+                    <li>Image Title : {{ ImageDetails?.lastupdate }}</li>
+                    <li>Date : {{ ImageDetails?.datePosted }}</li>
+                    <li>Favorite : {{ ImageDetails?.isfavorite }}</li>
+                    <li>Description : {{ ImageDetails?.description }}</li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <img class="image-box zoom" src="{{ ImageDetails?.url }}.jpg" />
+            </div>
+        </div>
+    </div>
+</body>
+</html>

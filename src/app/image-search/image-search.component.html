@@ -1,0 +1,27 @@
+<div class="container">
+    <h1 class="text-center">Welcome to Picture Book</h1>
+    <div class="form-group">
+        <input type="search" class="form-control" [value]="searchValue" (keyup)="searchImages($event)"
+            placeholder="Search images">
+    </div>
+
+    <div class="row" *ngFor="let image of imageData">
+        <div class="col-xs-12 col-md-6 col-lg-4 p-3" *ngFor="let image of imageData">
+            <div class="card">
+                <a routerLink="/imagedetails/{{ image.id }}">
+                    <img src="{{ image.url }}_m.jpg" title="{{ image.title }}" />
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div *ngFor="let image of imageData">
+            <a routerLink="/imagedetails/{{ image.id }}">
+                <img src="{{ image.url }}_m.jpg" title="{{ image.title }}" />
+            </a>
+    </div>
+
+    <div infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="50"
+        (scrolled)="onPageScroll()"></div>
+
+</div>
