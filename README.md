@@ -19,9 +19,9 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 Command to install bootstrap : npm install bootstrap
 Bootstrap is an open source CSS framework that has many components for building responsive web interfaces.
 
-## install ngx-infinite-scroller
+## install ngx-infinite-scroll
 
-Command : npm install ngx-infinite-scroller
+Command : npm install ngx-infinite-scroll
 This is used for Infinite and bidirectional scroll directive for page.
 
 ## npm install
